@@ -176,3 +176,27 @@ firstGameContainer.appendChild(topGameName);
 const runnerUpGameName = document.createElement("h3");
 runnerUpGameName.innerHTML = runnerUpGame.name;
 secondGameContainer.appendChild(runnerUpGameName);
+
+// grab search input and button
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+
+// search games by name
+function searchGames() {
+    // clear existing games
+    deleteChildElements(gamesContainer);
+
+    // get the search text and make it lowercase
+    const searchTerm = searchInput.value.toLowerCase();
+
+    // filter games whose name includes the search term
+    const filteredGames = GAMES_JSON.filter(game =>
+        game.name.toLowerCase().includes(searchTerm)
+    );
+
+    // display the filtered games
+    addGamesToPage(filteredGames);
+}
+
+searchBtn.addEventListener("click", searchGames);
+

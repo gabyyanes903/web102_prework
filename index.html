@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- header row with logo -->
     <div class="header">
         <img id="tentacles" src="assets/tentacles.png">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
     </div>
 
+    <!-- navigation bar -->
+    <div class="nav-bar">
+        <a href="#description-container">About</a>
+        <a href="#top-games">Top Games</a>
+        <a href="#games-container">Our Games</a>
+    </div>
+    
     <!-- background info about company -->
     <h2>Welcome to Sea Monster!</h2>
     <div id="description-container">
@@ -50,6 +58,14 @@
     <!-- list of games funded by Sea Monster -->
     <h2>Our Games</h2>
     <p>Check out each of our games below!</p>
+
+    <!--search bar-->
+    <div id="search-containter">
+        <input type="text" id="search-input" placeholder="Search games by name..." />
+        <button id="search-btn">Search</button>
+    </div>
+
+  
     <div id="button-container">
         <button id="unfunded-btn">Show Unfunded Only</button>
         <button id="funded-btn">Show Funded Only</button>
@@ -60,5 +76,6 @@
     </div>
 
     <script type="module" src="index.js"></script>
-  </body>
+</body>
+
 </html>
